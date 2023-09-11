@@ -1,0 +1,1381 @@
+{
+	"info": {
+		"_postman_id": "56698d19-e950-4fad-b6d3-b57f98c0ca52",
+		"name": "Bill_system_FINAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin_Permissions",
+			"item": [
+				{
+					"name": "bill",
+					"item": [
+						{
+							"name": "Create bill",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc3ODYwNTAsImV4cCI6MTY1Nzc4OTY1MCwibmJmIjoxNjU3Nzg2MDUwLCJqdGkiOiJjU0xnSlM3ZHpObmFIZ1JWIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.S74yRvd-yhWG-kri3xO2ZqukmzZAvkPTnEr4nUq-Exo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/admin/bills",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"bills"
+									],
+									"query": [
+										{
+											"key": "bill_number",
+											"value": "1234",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update bill",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAwNDI5MDEsImV4cCI6MTY2MDA0NjUwMSwibmJmIjoxNjYwMDQyOTAxLCJqdGkiOiJ1a3JEOXRTYlRyUE5DblptIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.IfMkVtlyQ4xvx62C3A1DTWYpmW7nWb6MWa7WnMob-iw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/admin/bills/1?status=paid",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"bills",
+										"1"
+									],
+									"query": [
+										{
+											"key": "bill_number",
+											"value": "1234",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "paid"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add products ",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAwMzYxNTUsImV4cCI6MTY2MDAzOTc1NSwibmJmIjoxNjYwMDM2MTU1LCJqdGkiOiJSZTE3aVp5NHZXN2pRQzkwIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.2SN0wx9djI_y5Y017g5VLgPuMcv8sk2fsp-eqcbfRFI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/admin/bills/2/orders?product=iphon&quantity=43&price_one=234",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"bills",
+										"2",
+										"orders"
+									],
+									"query": [
+										{
+											"key": "product",
+											"value": "iphon"
+										},
+										{
+											"key": "quantity",
+											"value": "43"
+										},
+										{
+											"key": "price_one",
+											"value": "234"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "calculator",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAxNTU1NTksImV4cCI6MTY2MDE1OTE1OSwibmJmIjoxNjYwMTU1NTU5LCJqdGkiOiIwSGhGekFOTlBrbTJmYzRJIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.B6KoYFpiBF8JhTRTVWQCCX2cDRmuJcUdS0ssztUysp8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/admin/bills/3/vats",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"bills",
+										"3",
+										"vats"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update order",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTg3Njg1NDIsImV4cCI6MTY1ODc3MjE0MiwibmJmIjoxNjU4NzY4NTQyLCJqdGkiOiJmbU4wb2ZyZk5CaHJ5RkNpIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.l0URgsayuvR9s6mz1dQVYQ2n9gzTUved7jyooQS2840",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/admin/bills/2/orders/1?quantity=25",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"bills",
+										"2",
+										"orders",
+										"1"
+									],
+									"query": [
+										{
+											"key": "quantity",
+											"value": "25"
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete order",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTg4MTA2MjksImV4cCI6MTY1ODgxNDIyOSwibmJmIjoxNjU4ODEwNjI5LCJqdGkiOiJOckVIWUJFNFMwMkFUckd2Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5FJZESBBRNuRZ3t7eOeESFFx7Om8mrb6uezIBvO_Fes",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/admin/bills/1/orders/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"bills",
+										"1",
+										"orders",
+										"2"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all admin’s bills",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAxNTU1NTksImV4cCI6MTY2MDE1OTE1OSwibmJmIjoxNjYwMTU1NTU5LCJqdGkiOiIwSGhGekFOTlBrbTJmYzRJIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.B6KoYFpiBF8JhTRTVWQCCX2cDRmuJcUdS0ssztUysp8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/admin/bills",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"bills"
+									],
+									"query": [
+										{
+											"key": "bill_number",
+											"value": "1234",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Search about costumer by username",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc0NTc5OTcsImV4cCI6MTY1NzQ2MTU5NywibmJmIjoxNjU3NDU3OTk3LCJqdGkiOiJSdVo1YWs3Sk5FS1o4cGM3Iiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.WCcnb02Yq7dMb-cGYhxwRjnxiI5gU2wdli97Q79jA28",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/admin/searchCostumer/costumer",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"searchCostumer",
+								"costumer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add friend",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAxNTU1NTksImV4cCI6MTY2MDE1OTE1OSwibmJmIjoxNjYwMTU1NTU5LCJqdGkiOiIwSGhGekFOTlBrbTJmYzRJIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.B6KoYFpiBF8JhTRTVWQCCX2cDRmuJcUdS0ssztUysp8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/admin/addCostumer/beier.albert",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"addCostumer",
+								"beier.albert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send bill",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAxMjc2NzYsImV4cCI6MTY2MDEzMTI3NiwibmJmIjoxNjYwMTI3Njc2LCJqdGkiOiIyNERyZ2RvWjR3QWVOcUdkIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1bLm4nrtggnnyjZKYevrjFEa1VSdBccfEa6BNMxeGyk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/admin/sendBill/4/bill/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"sendBill",
+								"4",
+								"bill",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search about bill by username",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAxMTIzMDcsImV4cCI6MTY2MDExNTkwNywibmJmIjoxNjYwMTEyMzA3LCJqdGkiOiJPSHZONUl5TmViZFpGNGJFIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Epbkm8rieO5XOu0rZER06fvNxzzpxRTq74vgLM094ow",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/admin/searchBill/luettgen.hobart",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"searchBill",
+								"luettgen.hobart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all invoice paid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAxNTU1NTksImV4cCI6MTY2MDE1OTE1OSwibmJmIjoxNjYwMTU1NTU5LCJqdGkiOiIwSGhGekFOTlBrbTJmYzRJIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.B6KoYFpiBF8JhTRTVWQCCX2cDRmuJcUdS0ssztUysp8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/admin/invoicePaid",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"invoicePaid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all invoice unpaid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTk1MTc5MTksImV4cCI6MTY1OTUyMTUxOSwibmJmIjoxNjU5NTE3OTE5LCJqdGkiOiJpQ0pKdmNyWnowNmZybDNmIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.DLKZKhF12JYe2OYIW_SlqywrXNIz69R0iIiEkQ3sncc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/admin/invoiceUnPaid",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"invoiceUnPaid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all invoice partially paid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTk1MTc5MTksImV4cCI6MTY1OTUyMTUxOSwibmJmIjoxNjU5NTE3OTE5LCJqdGkiOiJpQ0pKdmNyWnowNmZybDNmIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.DLKZKhF12JYe2OYIW_SlqywrXNIz69R0iIiEkQ3sncc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/admin/invoicePartial",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"invoicePartial"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/auth/signup?email=costumer1@gmail.com&password=Test@123&password_confirmation=Test@123&role_id=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "nour",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "costumer1@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "Test@123"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "Test@123"
+								},
+								{
+									"key": "role_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3VzZXJzL3NpZ251cCIsImlhdCI6MTY1NzA0NzcyNCwiZXhwIjoxNjU3MDUxMzI0LCJuYmYiOjE2NTcwNDc3MjQsImp0aSI6IkU1VUV3dmwxQ1JhQXBuRzYiLCJzdWIiOiI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.8a78gWlOmepZFMfyCz9XNwC4U5z7J4L0dLceLk0ElQE",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/auth/login?email=costumer1@gmail.com&password=Test@1234",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "nour",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "costumer1@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "Test@1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTcxOTM3MTIsImV4cCI6MTY1NzE5NzMxMiwibmJmIjoxNjU3MTkzNzEyLCJqdGkiOiJYNlN6VjRhaWI4bjBZMFdJIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.adKL-VuN1qGuJ-xAnVzV6UHCxXTX8t5cPa1v1JWXLss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/auth/token/refresh",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"token",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvdG9rZW4vcmVmcmVzaCIsImlhdCI6MTY1NzE5MjQ2MSwiZXhwIjoxNjU3MTk2MTIwLCJuYmYiOjE2NTcxOTI1MjAsImp0aSI6Im5hR1ZqWFVVTm1KS3hFdVoiLCJzdWIiOiI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.2dkwI2ORgrrCJvJ4Um5lpzFhgNnLFiCsurwQknsB4oM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/auth/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profiles",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTk5NTE5OTYsImV4cCI6MTY1OTk1NTU5NiwibmJmIjoxNjU5OTUxOTk2LCJqdGkiOiJMVEYya0F4cWxiTEZlVFc2Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Cyqo8jkvHmeZRZitD4n-CSDEOyzzUeNJMKo_W6GZ46g",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/admin/getprofile",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"getprofile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc1Mjg0ODQsImV4cCI6MTY1NzUzMjA4NCwibmJmIjoxNjU3NTI4NDg0LCJqdGkiOiJyZlNUWlhJYjgzTEZVWjlCIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.DZDod0pNloDvAVJGe_GSfavmPSeAQPiPt2rUXawKJx0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "business_name",
+											"value": "nwn",
+											"type": "default"
+										},
+										{
+											"key": "phone number",
+											"value": "0987654321",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Damas",
+											"type": "default"
+										},
+										{
+											"key": "region",
+											"value": "Barzeh",
+											"type": "default"
+										},
+										{
+											"key": "logo",
+											"type": "file",
+											"src": "/C:/Users/USER/Pictures/a2cc71e1d4da4566072be36304b208a5.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/admin/updateProfile",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"updateProfile"
+									],
+									"query": [
+										{
+											"key": "business_name",
+											"value": "nwnBusiness",
+											"disabled": true
+										},
+										{
+											"key": "phone number",
+											"value": "0987654321",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "Damas",
+											"disabled": true
+										},
+										{
+											"key": "region",
+											"value": "Barzeh",
+											"disabled": true
+										},
+										{
+											"key": "logo",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update one data or more in profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc0NTM0NzQsImV4cCI6MTY1NzQ1NzA3NCwibmJmIjoxNjU3NDUzNDc0LCJqdGkiOiJIOEdjd2pIeHZFYzdXalJ3Iiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Xokv56c9JmeF5zbfepVHIfXUuknAuNrWuiajaSSVsAE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/admin/editprofile?logo_img_url=logo",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"editprofile"
+									],
+									"query": [
+										{
+											"key": "logo_img_url",
+											"value": "logo"
+										},
+										{
+											"key": "last_name",
+											"value": "nasser",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc0NTc3NjIsImV4cCI6MTY1NzQ2MTM2MiwibmJmIjoxNjU3NDU3NzYyLCJqdGkiOiJqUUlqbG9wUkpHTzhhSVNEIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.B53T3J8A1wsNMcQkN9sV_Wbr3FYlyPaWiyoS2-28J98",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/admin/deleteAccount",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"deleteAccount"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Costumer",
+					"item": [
+						{
+							"name": "Profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc0Mzg4OTgsImV4cCI6MTY1NzQ0MjQ5OCwibmJmIjoxNjU3NDM4ODk4LCJqdGkiOiJNN3lmWGhDUFJPcm5KZlk3Iiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.NNKIjrKeOvcoQst01fwa37JaoTBMgkG1X-2cOTuqqsc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/costumer/getprofile",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"costumer",
+										"getprofile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc0NTgwMzUsImV4cCI6MTY1NzQ2MTYzNSwibmJmIjoxNjU3NDU4MDM1LCJqdGkiOiJ5SEx3bjF5MmU4RTNtZkpUIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.xQQnx7R-XFGG5261kcN50m_45D5RrTVaBnkOjJhmfYE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/costumer/editprofile?first_name=nour&last_name=nasser&user_name=costumer1&phone_number=0987654321",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"costumer",
+										"editprofile"
+									],
+									"query": [
+										{
+											"key": "first_name",
+											"value": "nour"
+										},
+										{
+											"key": "last_name",
+											"value": "nasser"
+										},
+										{
+											"key": "user_name",
+											"value": "costumer1"
+										},
+										{
+											"key": "phone_number",
+											"value": "0987654321"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update one data or more in profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc0Mzg4OTgsImV4cCI6MTY1NzQ0MjQ5OCwibmJmIjoxNjU3NDM4ODk4LCJqdGkiOiJNN3lmWGhDUFJPcm5KZlk3Iiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.NNKIjrKeOvcoQst01fwa37JaoTBMgkG1X-2cOTuqqsc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/costumer/updateprofile?first_name=nwn",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"costumer",
+										"updateprofile"
+									],
+									"query": [
+										{
+											"key": "first_name",
+											"value": "nwn"
+										},
+										{
+											"key": "last_name",
+											"value": "nasser",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc0Mzg4OTgsImV4cCI6MTY1NzQ0MjQ5OCwibmJmIjoxNjU3NDM4ODk4LCJqdGkiOiJNN3lmWGhDUFJPcm5KZlk3Iiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.NNKIjrKeOvcoQst01fwa37JaoTBMgkG1X-2cOTuqqsc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/costumer/deleteAccount",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"costumer",
+										"deleteAccount"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Costumer_Permission",
+			"item": [
+				{
+					"name": "Approve request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAxNTc1MjQsImV4cCI6MTY2MDE2MTEyNCwibmJmIjoxNjYwMTU3NTI0LCJqdGkiOiJDck1oTHBLSFl6cVViV0RPIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._18z6b8qo2I4164UBpt8ZLXFWVLR_Wl6xutA_3YSdow",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/costumer/approve/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"costumer",
+								"approve",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reject request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTk4NTA1NDIsImV4cCI6MTY1OTg1NDE0MiwibmJmIjoxNjU5ODUwNTQyLCJqdGkiOiJNRzBrZ0Q3cUE1MWpER0VQIiwic3ViIjoiNSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.zqZnzjj1Alyf6O5P-7nr5wgu4vPLq0KV4VUDTYmZAPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/costumer/reject/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"costumer",
+								"reject",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all costumer’s bills",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAwNDI5ODYsImV4cCI6MTY2MDA0NjU4NiwibmJmIjoxNjYwMDQyOTg2LCJqdGkiOiI3ZTRwYXhTRjZ5QjJKcVRtIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.YZMHh0MYoZ-fwZgm_gRx4wnvm5JoLuT1nSljMVqMUJc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/costumer/index",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"costumer",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all invoice paid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAwNDQxNzgsImV4cCI6MTY2MDA0Nzc3OCwibmJmIjoxNjYwMDQ0MTc4LCJqdGkiOiJHSU52QVdnd2ZwTTZQNTNWIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.QiQ9NrwTNhtZDbp2U6f-EUD6lZYgI5H814ztTMtaF-U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/costumer/invoicePaid",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"costumer",
+								"invoicePaid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all invoice unpaid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAwNDQxNzgsImV4cCI6MTY2MDA0Nzc3OCwibmJmIjoxNjYwMDQ0MTc4LCJqdGkiOiJHSU52QVdnd2ZwTTZQNTNWIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.QiQ9NrwTNhtZDbp2U6f-EUD6lZYgI5H814ztTMtaF-U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/costumer/invoiceUnPaid",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"costumer",
+								"invoiceUnPaid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all invoice partially paid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAwNDQxNzgsImV4cCI6MTY2MDA0Nzc3OCwibmJmIjoxNjYwMDQ0MTc4LCJqdGkiOiJHSU52QVdnd2ZwTTZQNTNWIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.QiQ9NrwTNhtZDbp2U6f-EUD6lZYgI5H814ztTMtaF-U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/costumer/invoicePartial",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"costumer",
+								"invoicePartial"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search about bill by business_name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAxMTI5NTksImV4cCI6MTY2MDExNjU1OSwibmJmIjoxNjYwMTEyOTU5LCJqdGkiOiJ5Z3NEQkJoRlFEYkdXY0RLIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Ery8QVfVTnap7bgNUviYYR5f79tHU5f1o7R2EcyDb38",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/costumer/searchBill/Koelpin-Mertz",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"costumer",
+								"searchBill",
+								"Koelpin-Mertz"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete paid invoices",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAwNDI5ODYsImV4cCI6MTY2MDA0NjU4NiwibmJmIjoxNjYwMDQyOTg2LCJqdGkiOiI3ZTRwYXhTRjZ5QjJKcVRtIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.YZMHh0MYoZ-fwZgm_gRx4wnvm5JoLuT1nSljMVqMUJc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/costumer/destroy/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"costumer",
+								"destroy",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get pending requests",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjAwNDA0NzQsImV4cCI6MTY2MDA0NDA3NCwibmJmIjoxNjYwMDQwNDc0LCJqdGkiOiJLMmdjODFWdDVVbWZlTTdlIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.mHPbYyQBpc7D2UUZ_p-NnqG45oUzpCVr_04JkY5a5L4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/costumer/getRequests",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"costumer",
+								"getRequests"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvdG9rZW4vcmVmcmVzaCIsImlhdCI6MTY1NzE5MjQ2MSwiZXhwIjoxNjU3MTk2MTIwLCJuYmYiOjE2NTcxOTI1MjAsImp0aSI6Im5hR1ZqWFVVTm1KS3hFdVoiLCJzdWIiOiI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.2dkwI2ORgrrCJvJ4Um5lpzFhgNnLFiCsurwQknsB4oM",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
